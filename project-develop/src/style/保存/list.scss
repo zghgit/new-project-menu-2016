@@ -1,0 +1,91 @@
+.lis{
+    margin-left: 220px;
+    padding-top: 20px;
+}
+.nav-role{
+    float: right;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    >div{
+        margin-top: 6px;
+        padding: 6px;
+        border: 1px solid #f0f0f8;
+        display: flex;
+        align-items: center;
+        img{
+            height: 30px;
+        }
+        i{
+            transition: all 0.1s;
+            margin-left: 5px;
+            margin-top: 3px;
+            &.overturn{
+                transform: rotate(-180deg);
+            }
+        }
+    }
+    >ul{
+        width: 180px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        list-style: none;
+        border-radius: 2px;
+        padding: 0;
+        z-index: 999;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.176);
+        overflow: hidden;
+        position: relative;
+        display: none;
+        transition: all 0.4s;
+        &.show{
+            display: block;
+        }
+        >.divider{
+            height: 1px;
+            overflow: hidden;
+            background-color: #e5e5e5;
+        }
+        >li{
+            background: #fff;
+            padding: 0 15px;
+            >a{
+                height: 40px;
+                width: 100%;
+                cursor: pointer;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                &:hover span{
+                    color: #00a9e8;
+                }
+                >i{
+                    color: #333;
+                    margin-right: 5px;
+                    width: 18px;
+                    height: 18px;
+                }
+                >span{
+                    color: #333;
+                    font-size: 14px;
+                }
+                &:hover {
+                    i {
+                        color: #50C8EA;
+                    }
+                }
+            }
+            &:hover{
+                background: #f5f5f5;
+            }
+            &:hover span{
+                color: #00a9e8;
+            }
+        }
+    }
+    >ul:hover {
+        display: block;
+    }
+
+}
